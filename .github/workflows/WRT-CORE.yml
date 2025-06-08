@@ -246,8 +246,8 @@ jobs:
 
           if [[ $WRT_TEST != 'true' ]]; then
             KVER=$(find ./bin/targets/ -type f -name "*.manifest" -exec grep -oP '^kernel - \K[\d\.]+' {} \;)
-            find ./bin/targets/ -iregex ".*\(buildinfo\|json\|manifest\|sha256sums\|packages\)$" -exec rm -rf {} +
-            find ./bin/targets/ -iregex ".*\(squashfs-recovery\|initramfs-uImage\).*" -exec rm -rf {} +
+            #find ./bin/targets/ -iregex ".*\(buildinfo\|json\|manifest\|sha256sums\|packages\)$" -exec rm -rf {} +
+            #find ./bin/targets/ -iregex ".*\(squashfs-recovery\|initramfs-uImage\).*" -exec rm -rf {} +
 
             for TYPE in $WRT_TYPE ; do
               for FILE in $(find ./bin/targets/ -type f -iname "*$TYPE*.*") ; do
